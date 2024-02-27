@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "c:\\Users\\aymaz\\Desktop\\premier_programme\\exemple.js",
+            "args": [],
+            "name": "debug exemple.js",
+            "type": "node"
+        }
+    ]
+}
