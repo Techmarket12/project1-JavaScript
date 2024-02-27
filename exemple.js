@@ -1,9 +1,10 @@
 
 if('geolocation' in navigator) {
 navigator.geolocation.getCurrentPosition((position) => {
+  let yourAppId = "";
   let lat = position.coords.latitude
   let lon = position.coords.longitude
-  const url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat+ '&lon=' + lon + '&appid=dc8c9152e8adaad0ec8bf635818c0d42&units=metric'
+  const url = 'https://api.openweathermap.org/data/2.5/weather?lat=' + lat+ '&lon=' + lon + '&appid=' + yourAppId + '&units=metric'
   console.log(url);
   axios.get(url)
   .then((response) => {
@@ -40,7 +41,8 @@ button.addEventListener('click', () => {
 
 
 function trouverLaTemp (ville) {
-  const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + ville + '&appid=dc8c9152e8adaad0ec8bf635818c0d42&units=metric';
+  let yourAppId2="";
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + ville + '&appid=' + yourAppId + '&units=metric'
   console.log(url);
   axios.get(url)
   .then((response) => {
